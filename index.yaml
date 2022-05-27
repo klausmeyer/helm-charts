@@ -1,0 +1,25 @@
+apiVersion: v1
+entries:
+  oopsy:
+  - apiVersion: v2
+    appVersion: 1.0.0-dev
+    created: "2022-05-27T21:20:31.134824576Z"
+    description: Rails based error tracker
+    digest: 51980b9b7c6607ce2859160bbbc9a47682cc84de5cf1c52724b57fa714acc385
+    name: oopsy
+    type: application
+    urls:
+    - https://github.com/klausmeyer/helm-charts/releases/download/oopsy-0.1.0/oopsy-0.1.0.tgz
+    version: 0.1.0
+  whatchy:
+  - apiVersion: v2
+    appVersion: 1.0.0-dev
+    created: "2022-05-27T21:20:31.235572313Z"
+    description: Rails app to track tv shows / series
+    digest: 8cdcbd5a7262c453e8dd332bdac8700ef027210607dd643eed8ad4de64f9e316
+    name: whatchy
+    type: application
+    urls:
+    - https://github.com/klausmeyer/helm-charts/releases/download/whatchy-0.1.0/whatchy-0.1.0.tgz
+    version: 0.1.0
+generated: "2022-05-27T21:20:31.235672415Z"
