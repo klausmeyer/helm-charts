@@ -1,0 +1,4 @@
+helm-extra-args: --timeout 600
+debug: true
+chart-repos:
+  - klausmeyer=https://klausmeyer.github.io/helm-charts
