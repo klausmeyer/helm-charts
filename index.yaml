@@ -2,6 +2,17 @@ apiVersion: v1
 entries:
   docker-registry-browser:
   - apiVersion: v2
+    appVersion: 1.5.0
+    created: "2022-05-31T16:55:41.251095017Z"
+    description: Web Interface for the Docker Registry HTTP API V2 written in Ruby
+      on Rails.
+    digest: 67b30a2bbf00eab204d123b518881860ec78bf5b4965152b83b5c959e8f8cce5
+    name: docker-registry-browser
+    type: application
+    urls:
+    - https://github.com/klausmeyer/helm-charts/releases/download/docker-registry-browser-0.1.1/docker-registry-browser-0.1.1.tgz
+    version: 0.1.1
+  - apiVersion: v2
     appVersion: 1.4.0
     created: "2022-05-27T21:42:36.304688164Z"
     description: Web Interface for the Docker Registry HTTP API V2 written in Ruby
@@ -34,4 +45,4 @@ entries:
     urls:
     - https://github.com/klausmeyer/helm-charts/releases/download/whatchy-0.1.0/whatchy-0.1.0.tgz
     version: 0.1.0
-generated: "2022-05-27T21:42:36.304696564Z"
+generated: "2022-05-31T16:55:41.251113517Z"
