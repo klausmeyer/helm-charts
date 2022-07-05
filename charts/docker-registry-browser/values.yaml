@@ -83,6 +83,12 @@ affinity: {}
 
 environment: {}
 
+extraVolumeMounts: []
+## Additional volumeMounts to the registry container.
+#  - mountPath: /secret-data
+#    name: cloudfront-pem-secret
+#    readOnly: true
+
 extraVolumes: []
 ## Additional volumes to the pod.
 #  - name: cloudfront-pem-secret
