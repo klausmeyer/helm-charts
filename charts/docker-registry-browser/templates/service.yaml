@@ -11,9 +11,9 @@ spec:
       targetPort: http
       protocol: TCP
       name: http
-      {{ if .Values.service.nodePort }}
+      {{- if .Values.service.nodePort }}
       nodePort: {{ .Values.service.nodePort }}
-      {{ end }}
+      {{- end }}
 
   selector:
     {{- include "docker-registry-browser.selectorLabels" . | nindent 4 }}
