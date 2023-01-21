@@ -59,6 +59,16 @@ entries:
   oopsy:
   - apiVersion: v2
     appVersion: 1.0.0-dev
+    created: "2023-01-21T16:46:01.559561902Z"
+    description: Rails based error tracker
+    digest: 5015cd0a55ccfc3ccbc92c56842d9acc1043c0cf4169bdd448394ebd66d09e09
+    name: oopsy
+    type: application
+    urls:
+    - https://github.com/klausmeyer/helm-charts/releases/download/oopsy-0.1.1/oopsy-0.1.1.tgz
+    version: 0.1.1
+  - apiVersion: v2
+    appVersion: 1.0.0-dev
     created: "2022-05-27T21:20:31.134824576Z"
     description: Rails based error tracker
     digest: 51980b9b7c6607ce2859160bbbc9a47682cc84de5cf1c52724b57fa714acc385
@@ -88,4 +98,4 @@ entries:
     urls:
     - https://github.com/klausmeyer/helm-charts/releases/download/whatchy-0.1.0/whatchy-0.1.0.tgz
     version: 0.1.0
-generated: "2023-01-21T15:49:14.547440933Z"
+generated: "2023-01-21T16:46:01.67756191Z"
