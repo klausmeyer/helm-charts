@@ -70,6 +70,16 @@ entries:
   whatchy:
   - apiVersion: v2
     appVersion: 1.0.0-dev
+    created: "2023-01-21T15:49:14.547417131Z"
+    description: Rails app to track tv shows / series
+    digest: 64ec5368480daf06014855dad4be924e0ff3b5980610528aa4c362cb42b5cfef
+    name: whatchy
+    type: application
+    urls:
+    - https://github.com/klausmeyer/helm-charts/releases/download/whatchy-0.1.1/whatchy-0.1.1.tgz
+    version: 0.1.1
+  - apiVersion: v2
+    appVersion: 1.0.0-dev
     created: "2022-05-27T21:20:31.235572313Z"
     description: Rails app to track tv shows / series
     digest: 8cdcbd5a7262c453e8dd332bdac8700ef027210607dd643eed8ad4de64f9e316
@@ -78,4 +88,4 @@ entries:
     urls:
     - https://github.com/klausmeyer/helm-charts/releases/download/whatchy-0.1.0/whatchy-0.1.0.tgz
     version: 0.1.0
-generated: "2023-01-02T07:03:14.885275789Z"
+generated: "2023-01-21T15:49:14.547440933Z"
