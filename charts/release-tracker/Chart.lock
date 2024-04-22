@@ -1,0 +1,9 @@
+dependencies:
+- name: rails-application
+  repository: https://klausmeyer.github.io/helm-charts
+  version: 0.1.0-alpha1
+- name: redis
+  repository: https://groundhog2k.github.io/helm-charts
+  version: 0.7.10
+digest: sha256:5ee21155bfcf2cbea91337cbba9a3434a2c9354556aec76dafcf03dfbbaf3734
+generated: "2024-04-22T03:13:33.361053705+02:00"

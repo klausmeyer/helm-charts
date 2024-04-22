@@ -1,0 +1,28 @@
+rails-application:
+  name: release-tracker
+  version: "0.1.0"
+
+  image:
+    repository: klausmeyer/release-tracker
+
+  environment:
+    # sealedSecrets: false
+    plain:
+      #  AIRBRAKE_HOST: "<...>"
+      #  AIRBRAKE_PROJECT_ID: "<...>"
+      REDIS_URL: "redis://release-tracker-redis:6379/0"
+    secret: {}
+    #  DATABASE_URL: "<...>"
+    #  GITHUB_TOKEN: "<...>"
+    #  SECRET_KEY_BASE: "<...>"
+    #  WEBHOOK_DISCORD_URL: "<...>"
+
+  deployments:
+    web:
+      enabled: true
+    sidekiq:
+      enabled: true
+
+redis:
+  haMode:
+    enabled: false
