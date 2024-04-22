@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ include "rails-application.fullname" . }}-web
+  labels:
+    {{- include "rails-application.labels" . | nindent 4 }}
+spec:
+  type: {{ .Values.service.type }}
+  ports:
+    - port: {{ .Values.service.port }}
+      targetPort: http
+      protocol: TCP
+      name: http
+  selector:
+    k8s.klaus-meyer.net/deployment-type: web
+    {{- include "rails-application.selectorLabels" . | nindent 4 }}

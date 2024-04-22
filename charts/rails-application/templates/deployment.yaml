@@ -1,0 +1,84 @@
+{{- range $deploymentName, $deploymentValues := .Values.deployments }}
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ printf "%s-%s" (include "rails-application.fullname" $) $deploymentName }}
+  labels:
+    {{- include "rails-application.labels" $ | nindent 4 }}
+spec:
+  {{- if not $.Values.autoscaling.enabled }}
+  replicas: {{ $deploymentValues.replicaCount }}
+  {{- end }}
+  selector:
+    matchLabels:
+      {{- include "rails-application.selectorLabels" $ | nindent 6 }}
+  template:
+    metadata:
+      {{- with $.Values.podAnnotations }}
+      annotations:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      labels:
+        "k8s.klaus-meyer.net/deployment-type": {{ $deploymentName }}
+        {{- include "rails-application.labels" $ | nindent 8 }}
+        {{- with $.Values.podLabels }}
+        {{- toYaml . | nindent 8 }}
+        {{- end }}
+    spec:
+      {{- with $.Values.imagePullSecrets }}
+      imagePullSecrets:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      serviceAccountName: {{ include "rails-application.serviceAccountName" $ }}
+      securityContext:
+        {{- toYaml $.Values.podSecurityContext | nindent 8 }}
+      containers:
+        - name: {{ printf "%s-%s" (include "rails-application.fullname" $) $deploymentName }}
+          securityContext:
+            {{- toYaml $.Values.securityContext | nindent 12 }}
+          image: "{{ $.Values.image.repository }}:{{ $.Values.image.tag | default $.Values.version }}"
+          imagePullPolicy: {{ $.Values.image.pullPolicy }}
+          args: ["{{ $deploymentName }}"]
+          envFrom:
+            - configMapRef:
+                name: {{ include "rails-application.fullname" $ }}
+            - secretRef:
+                name: {{ include "rails-application.fullname" $ }}
+          {{- if $deploymentValues.ports }}
+          {{- with $deploymentValues.ports }}
+          ports:
+            {{- toYaml . | nindent 12 }}
+          {{- end }}
+          {{- end }}
+          {{- if $deploymentValues.livenessProbe }}
+          livenessProbe:
+            {{- toYaml $deploymentValues.livenessProbe | nindent 12 }}
+          {{- end -}}
+          {{- if $deploymentValues.readinessProbe }}
+          readinessProbe:
+            {{- toYaml $deploymentValues.readinessProbe | nindent 12 }}
+          {{ end }}
+          resources:
+            {{- toYaml $.Values.resources | nindent 12 }}
+          {{- with $.Values.volumeMounts }}
+          volumeMounts:
+            {{- toYaml . | nindent 12 }}
+          {{- end }}
+      {{- with $.Values.volumes }}
+      volumes:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      {{- with $.Values.nodeSelector }}
+      nodeSelector:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      {{- with $.Values.affinity }}
+      affinity:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      {{- with $.Values.tolerations }}
+      tolerations:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+---
+{{- end }}
