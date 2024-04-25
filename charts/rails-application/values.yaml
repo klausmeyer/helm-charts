@@ -2,6 +2,9 @@
 # This is a YAML-formatted file.
 # Declare variables to be passed into your templates.
 
+name: placeholder
+version: "9.9.9"
+
 image:
   repository: my-application
   pullPolicy: IfNotPresent
@@ -33,6 +36,11 @@ deployments:
       httpGet:
         path: /health/all
         port: http
+
+cronjobs: {}
+  # daily:
+  #   schedule: "30 6 * * *"
+  #   args: ["rake", "crons:daily"]
 
 serviceAccount:
   # Specifies whether a service account should be created

@@ -1,0 +1,52 @@
+{{- range $cronjobName, $cronjobValues := .Values.cronjobs }}
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: {{ printf "%s-%s-%s" (include "rails-application.fullname" $) "crons" $cronjobName }}
+  labels:
+    {{- include "rails-application.labels" $ | nindent 4 }}
+spec:
+  schedule: {{ $cronjobValues.schedule | quote }}
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          {{- with $.Values.imagePullSecrets }}
+          imagePullSecrets:
+            {{- toYaml $ | nindent 12 }}
+          {{- end }}
+          serviceAccountName: {{ include "rails-application.serviceAccountName" $ }}
+          securityContext:
+            {{- toYaml $.Values.podSecurityContext | nindent 12 }}
+          containers:
+            - name: {{ printf "%s-%s-%s" (include "rails-application.fullname" $) "crons" $cronjobName }}
+              securityContext:
+                {{- toYaml $.Values.securityContext | nindent 16 }}
+              image: "{{ $.Values.image.repository }}:{{ $.Values.image.tag | default $.Values.version }}"
+              imagePullPolicy: {{ $.Values.image.pullPolicy }}
+              args:
+                {{- toYaml $cronjobValues.args | nindent 16 }}
+              envFrom:
+                - configMapRef:
+                    name: {{ include "rails-application.fullname" $ }}
+                - secretRef:
+                    name: {{ include "rails-application.fullname" $ }}
+          {{- with $.Values.volumes }}
+          volumes:
+            {{- toYaml $ | nindent 8 }}
+          {{- end }}
+          {{- with $.Values.nodeSelector }}
+          nodeSelector:
+            {{- toYaml $ | nindent 8 }}
+          {{- end }}
+          {{- with $.Values.affinity }}
+          affinity:
+            {{- toYaml $ | nindent 8 }}
+          {{- end }}
+          {{- with $.Values.tolerations }}
+          tolerations:
+            {{- toYaml $ | nindent 8 }}
+          {{- end }}
+          restartPolicy: OnFailure
+---
+{{- end }}
