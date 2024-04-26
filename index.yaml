@@ -80,6 +80,22 @@ entries:
     version: 0.1.0
   oopsy:
   - apiVersion: v2
+    created: "2024-04-26T15:03:15.2926309Z"
+    dependencies:
+    - name: rails-application
+      repository: https://klausmeyer.github.io/helm-charts
+      version: 0.1.0-alpha2
+    - name: redis
+      repository: https://groundhog2k.github.io/helm-charts
+      version: 0.7.10
+    description: A Helm chart for Kubernetes
+    digest: 4f33a82dcae35d6b9539c53ceaa0165781fcdcba35787de3508d109958ff5dfe
+    name: oopsy
+    type: application
+    urls:
+    - https://github.com/klausmeyer/helm-charts/releases/download/oopsy-0.2.0-alpha1/oopsy-0.2.0-alpha1.tgz
+    version: 0.2.0-alpha1
+  - apiVersion: v2
     appVersion: 1.0.0-dev
     created: "2023-01-21T16:46:01.559561902Z"
     description: Rails based error tracker
@@ -159,6 +175,19 @@ entries:
     - https://github.com/klausmeyer/helm-charts/releases/download/whatchy-0.2.0-alpha1/whatchy-0.2.0-alpha1.tgz
     version: 0.2.0-alpha1
   - apiVersion: v2
+    created: "2024-04-26T15:03:15.684878819Z"
+    dependencies:
+    - name: rails-application
+      repository: https://klausmeyer.github.io/helm-charts
+      version: 0.1.0-alpha2
+    description: A Helm chart for Kubernetes
+    digest: f88bb7dc5776d7e48ee964d9e4014a67c83008a05b615255a05b8acd5e0e20b1
+    name: whatchy
+    type: application
+    urls:
+    - https://github.com/klausmeyer/helm-charts/releases/download/whatchy-0.2.0-alpha1/whatchy-0.2.0-alpha1.tgz
+    version: 0.2.0-alpha1
+  - apiVersion: v2
     appVersion: 1.0.0-dev
     created: "2023-01-21T15:49:14.547417131Z"
     description: Rails app to track tv shows / series
@@ -178,4 +207,4 @@ entries:
     urls:
     - https://github.com/klausmeyer/helm-charts/releases/download/whatchy-0.1.0/whatchy-0.1.0.tgz
     version: 0.1.0
-generated: "2024-04-25T18:06:31.526948419Z"
+generated: "2024-04-26T15:03:15.684930185Z"
