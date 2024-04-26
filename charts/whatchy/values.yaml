@@ -36,7 +36,3 @@ rails-application:
     daily:
       schedule: "30 6 * * *"
       args: ["rake", "crons:daily"]
-
-redis:
-  haMode:
-    enabled: false
