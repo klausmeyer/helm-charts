@@ -160,6 +160,20 @@ entries:
     urls:
     - https://github.com/klausmeyer/helm-charts/releases/download/release-tracker-0.1.0-alpha1/release-tracker-0.1.0-alpha1.tgz
     version: 0.1.0-alpha1
+  smarthome-metrics-temperature:
+  - apiVersion: v2
+    created: "2024-04-26T16:57:14.135459681Z"
+    dependencies:
+    - name: rails-application
+      repository: https://klausmeyer.github.io/helm-charts
+      version: 0.1.0-alpha2
+    description: A Helm chart for Kubernetes
+    digest: 98faedefe2686bbbc53787dde631cbdd640aa6cafa9e8385d278db9e17a6fad0
+    name: smarthome-metrics-temperature
+    type: application
+    urls:
+    - https://github.com/klausmeyer/helm-charts/releases/download/smarthome-metrics-temperature-0.1.0-alpha1/smarthome-metrics-temperature-0.1.0-alpha1.tgz
+    version: 0.1.0-alpha1
   whatchy:
   - apiVersion: v2
     created: "2024-04-25T18:06:31.526907223Z"
@@ -207,4 +221,4 @@ entries:
     urls:
     - https://github.com/klausmeyer/helm-charts/releases/download/whatchy-0.1.0/whatchy-0.1.0.tgz
     version: 0.1.0
-generated: "2024-04-26T15:03:15.684930185Z"
+generated: "2024-04-26T16:57:14.135513783Z"
