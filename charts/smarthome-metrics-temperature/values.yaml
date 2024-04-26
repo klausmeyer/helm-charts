@@ -1,0 +1,24 @@
+rails-application:
+  name: smarthome-metrics-temperature
+  version: "0.1.0"
+
+  image:
+    repository: klausmeyer/smarthome-metrics-temperature
+
+  environment:
+    # sealedSecrets: false
+    plain: {}
+      # FRITZBOX_ENDPOINT: "<...>"
+    secret: {}
+      # FRITZBOX_USERNAME: "<...>"
+      # FRITZBOX_PASSWORD: "<...>"
+
+  deployments:
+    web:
+      enabled: true
+      livenessProbe:
+        httpGet:
+          path: /
+      readinessProbe:
+        httpGet:
+          path: /metrics
