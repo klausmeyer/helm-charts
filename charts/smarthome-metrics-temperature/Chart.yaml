@@ -6,5 +6,5 @@ version: "0.1.0-alpha1"
 
 dependencies:
   - name: rails-application
-    version: "0.1.0-alpha2"
+    version: "0.1.0"
     repository: https://klausmeyer.github.io/helm-charts
