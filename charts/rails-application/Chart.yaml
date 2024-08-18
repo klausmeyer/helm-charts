@@ -2,4 +2,4 @@ apiVersion: v2
 name: rails-application
 description: Base chart for my rails applications
 type: application
-version: "0.1.0-alpha2"
+version: "0.1.0-alpha3"

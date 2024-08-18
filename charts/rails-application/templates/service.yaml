@@ -12,5 +12,5 @@ spec:
       protocol: TCP
       name: http
   selector:
-    k8s.klaus-meyer.net/deployment-type: web
+    app.kubernetes.io/component: web
     {{- include "rails-application.selectorLabels" . | nindent 4 }}

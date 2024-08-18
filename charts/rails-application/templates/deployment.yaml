@@ -11,6 +11,7 @@ spec:
   {{- end }}
   selector:
     matchLabels:
+      app.kubernetes.io/component: {{ $deploymentName }}
       {{- include "rails-application.selectorLabels" $ | nindent 6 }}
   template:
     metadata:
@@ -19,7 +20,7 @@ spec:
         {{- toYaml . | nindent 8 }}
       {{- end }}
       labels:
-        "k8s.klaus-meyer.net/deployment-type": {{ $deploymentName }}
+        app.kubernetes.io/component: {{ $deploymentName }}
         {{- include "rails-application.labels" $ | nindent 8 }}
         {{- with $.Values.podLabels }}
         {{- toYaml . | nindent 8 }}
