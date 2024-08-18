@@ -154,6 +154,22 @@ entries:
     version: 0.1.0-alpha1
   release-tracker:
   - apiVersion: v2
+    created: "2024-08-18T09:47:26.029880354Z"
+    dependencies:
+    - name: rails-application
+      repository: https://klausmeyer.github.io/helm-charts
+      version: 0.1.0-alpha3
+    - name: redis
+      repository: https://groundhog2k.github.io/helm-charts
+      version: 0.7.10
+    description: A Helm chart for Kubernetes
+    digest: 481d6d054457ae43a7f8e5cb290ddb8212722410b1c629d67b91d0d6e5231839
+    name: release-tracker
+    type: application
+    urls:
+    - https://github.com/klausmeyer/helm-charts/releases/download/release-tracker-0.1.0-alpha2/release-tracker-0.1.0-alpha2.tgz
+    version: 0.1.0-alpha2
+  - apiVersion: v2
     created: "2024-04-22T01:24:47.196973948Z"
     dependencies:
     - name: rails-application
@@ -230,4 +246,4 @@ entries:
     urls:
     - https://github.com/klausmeyer/helm-charts/releases/download/whatchy-0.1.0/whatchy-0.1.0.tgz
     version: 0.1.0
-generated: "2024-08-18T09:44:53.994957757Z"
+generated: "2024-08-18T09:47:26.029932231Z"
