@@ -3,3 +3,4 @@ check-version-increment: true
 debug: true
 chart-repos:
   - klausmeyer=https://klausmeyer.github.io/helm-charts
+  - groundhog2k=https://groundhog2k.github.io/helm-charts
