@@ -34,4 +34,11 @@ jobs:
 
       - name: Run chart-testing (lint)
         if: steps.list-changed.outputs.changed == 'true'
-        run: ct lint --target-branch ${{ github.event.repository.default_branch }} --helm-extra-args="--timeout 600" --check-version-increment=false --validate-maintainers=false --debug=true --chart-repos="klausmeyer=https://klausmeyer.github.io/helm-charts,groundhog2k=https://groundhog2k.github.io/helm-charts"
+        run: |
+          ct lint \
+            --target-branch ${{ github.event.repository.default_branch }} \
+            --helm-extra-args="--timeout 600" \
+            --check-version-increment=false \
+            --validate-maintainers=false \
+            --debug=true \
+            --chart-repos="klausmeyer=https://klausmeyer.github.io/helm-charts,groundhog2k=https://groundhog2k.github.io/helm-charts"
