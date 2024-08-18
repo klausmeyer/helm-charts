@@ -1,6 +1,6 @@
 dependencies:
 - name: rails-application
   repository: https://klausmeyer.github.io/helm-charts
-  version: 0.1.0-alpha2
-digest: sha256:5745546d337f716196d354eb58e4936283586c0f3ba0daa5bfc218bb4c90599a
-generated: "2024-04-25T20:04:38.962981027+02:00"
+  version: 0.1.0
+digest: sha256:7a78d4920411f1bae9d0b4f928eac0dcb97e43cc2578245f6f6f2287d28065d1
+generated: "2024-08-18T10:08:35.309299958Z"
