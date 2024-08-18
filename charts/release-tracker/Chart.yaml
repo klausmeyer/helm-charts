@@ -2,11 +2,11 @@ apiVersion: v2
 name: release-tracker
 description: A Helm chart for Kubernetes
 type: application
-version: "0.1.0-alpha1"
+version: "0.1.0-alpha2"
 
 dependencies:
   - name: rails-application
-    version: "0.1.0-alpha1"
+    version: "0.1.0-alpha3"
     repository: https://klausmeyer.github.io/helm-charts
 
   - name: redis
