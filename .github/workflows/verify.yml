@@ -12,7 +12,7 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-        
+
       - name: Fetch history
         run: git fetch --prune --unshallow
 
@@ -34,10 +34,4 @@ jobs:
 
       - name: Run chart-testing (lint)
         if: steps.list-changed.outputs.changed == 'true'
-        run: ct lint --target-branch ${{ github.event.repository.default_branch }}
-        
-      - name: Run lint
-        uses: helm/chart-testing-action@v2.6.1
-        with:
-          command: lint
-          config: .github/verify-config.yaml
+        run: ct lint --target-branch ${{ github.event.repository.default_branch }} --helm-extra-args="--timeout 600" --check-version-increment=false --validate-maintainers=false --debug=true --chart-repos="klausmeyer=https://klausmeyer.github.io/helm-charts,groundhog2k=https://groundhog2k.github.io/helm-charts"

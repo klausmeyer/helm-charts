@@ -1,7 +1,0 @@
-helm-extra-args: --timeout 600
-check-version-increment: false
-validate-maintainers: false
-debug: true
-chart-repos:
-  - klausmeyer=https://klausmeyer.github.io/helm-charts
-  - groundhog2k=https://groundhog2k.github.io/helm-charts
