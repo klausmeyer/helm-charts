@@ -128,6 +128,22 @@ entries:
     - https://github.com/klausmeyer/helm-charts/releases/download/oopsy-0.2.0-alpha1/oopsy-0.2.0-alpha1.tgz
     version: 0.2.0-alpha1
   - apiVersion: v2
+    created: "2024-10-10T13:48:42.145986789Z"
+    dependencies:
+    - name: rails-application
+      repository: https://klausmeyer.github.io/helm-charts
+      version: 0.1.0
+    - name: redis
+      repository: https://groundhog2k.github.io/helm-charts
+      version: 1.3.2
+    description: A Helm chart for Kubernetes
+    digest: 749223decf65029b07596e877186de742d2a7a26d50bcd2f5a911db5da782772
+    name: oopsy
+    type: application
+    urls:
+    - https://github.com/klausmeyer/helm-charts/releases/download/oopsy-0.2.0-alpha1/oopsy-0.2.0-alpha1.tgz
+    version: 0.2.0-alpha1
+  - apiVersion: v2
     appVersion: 1.0.0-dev
     created: "2023-01-21T16:46:01.559561902Z"
     description: Rails based error tracker
@@ -234,6 +250,22 @@ entries:
     - https://github.com/klausmeyer/helm-charts/releases/download/release-tracker-0.1.0-alpha2/release-tracker-0.1.0-alpha2.tgz
     version: 0.1.0-alpha2
   - apiVersion: v2
+    created: "2024-10-10T13:48:42.340469919Z"
+    dependencies:
+    - name: rails-application
+      repository: https://klausmeyer.github.io/helm-charts
+      version: 0.1.0
+    - name: redis
+      repository: https://groundhog2k.github.io/helm-charts
+      version: 1.3.2
+    description: A Helm chart for Kubernetes
+    digest: 0462cd9acf860f211b4e89c8e3cc48037e596146383e0b8b28d0bcd57149e32a
+    name: release-tracker
+    type: application
+    urls:
+    - https://github.com/klausmeyer/helm-charts/releases/download/release-tracker-0.1.0-alpha2/release-tracker-0.1.0-alpha2.tgz
+    version: 0.1.0-alpha2
+  - apiVersion: v2
     created: "2024-04-22T01:24:47.196973948Z"
     dependencies:
     - name: rails-application
@@ -284,6 +316,19 @@ entries:
       version: 0.1.0
     description: A Helm chart for Kubernetes
     digest: d1e9b04c34b85a8529468244bf672ef9f6952e3cb1ce9c26aa0719fe9796dba2
+    name: smarthome-metrics-temperature
+    type: application
+    urls:
+    - https://github.com/klausmeyer/helm-charts/releases/download/smarthome-metrics-temperature-0.1.0-alpha1/smarthome-metrics-temperature-0.1.0-alpha1.tgz
+    version: 0.1.0-alpha1
+  - apiVersion: v2
+    created: "2024-10-10T13:48:42.521700165Z"
+    dependencies:
+    - name: rails-application
+      repository: https://klausmeyer.github.io/helm-charts
+      version: 0.1.0
+    description: A Helm chart for Kubernetes
+    digest: 76c8d7d09f6ba29344561219d948e97d1f4cf4615059df6c6630396d42733d8e
     name: smarthome-metrics-temperature
     type: application
     urls:
@@ -343,6 +388,19 @@ entries:
     - https://github.com/klausmeyer/helm-charts/releases/download/whatchy-0.2.0-alpha1/whatchy-0.2.0-alpha1.tgz
     version: 0.2.0-alpha1
   - apiVersion: v2
+    created: "2024-10-10T13:48:42.727466324Z"
+    dependencies:
+    - name: rails-application
+      repository: https://klausmeyer.github.io/helm-charts
+      version: 0.1.0
+    description: A Helm chart for Kubernetes
+    digest: 50619bfbd3234f554455b72b8c690aec0ba1100019768c2c78c9a722256341b7
+    name: whatchy
+    type: application
+    urls:
+    - https://github.com/klausmeyer/helm-charts/releases/download/whatchy-0.2.0-alpha1/whatchy-0.2.0-alpha1.tgz
+    version: 0.2.0-alpha1
+  - apiVersion: v2
     appVersion: 1.0.0-dev
     created: "2023-01-21T15:49:14.547417131Z"
     description: Rails app to track tv shows / series
@@ -362,4 +420,4 @@ entries:
     urls:
     - https://github.com/klausmeyer/helm-charts/releases/download/whatchy-0.1.0/whatchy-0.1.0.tgz
     version: 0.1.0
-generated: "2024-08-18T11:29:53.65494172Z"
+generated: "2024-10-10T13:48:42.727563325Z"
