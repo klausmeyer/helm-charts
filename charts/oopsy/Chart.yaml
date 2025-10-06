@@ -10,5 +10,5 @@ dependencies:
     repository: https://klausmeyer.github.io/helm-charts
 
   - name: redis
-    version: "2.1.4"
+    version: "2.1.5"
     repository: https://groundhog2k.github.io/helm-charts
