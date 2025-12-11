@@ -39,7 +39,8 @@ spec:
             {{- toYaml $.Values.securityContext | nindent 12 }}
           image: "{{ $.Values.image.repository }}:{{ $.Values.image.tag | default $.Values.version }}"
           imagePullPolicy: {{ $.Values.image.pullPolicy }}
-          args: ["{{ $deploymentName }}"]
+          args:
+            {{- toYaml $deploymentValues.args | nindent 16 }}
           envFrom:
             - configMapRef:
                 name: {{ include "rails-application.fullname" $ }}

@@ -22,6 +22,7 @@ environment:
 
 deployments:
   web:
+    args: ["./bin/thrust", "./bin/rails", "server"]
     enabled: true
     replicaCount: 1
     ports:
