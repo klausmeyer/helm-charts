@@ -94,6 +94,22 @@ entries:
     version: 0.1.0
   oopsy:
   - apiVersion: v2
+    created: "2025-12-11T19:50:31.811163192Z"
+    dependencies:
+    - name: rails-application
+      repository: https://klausmeyer.github.io/helm-charts
+      version: 0.2.1
+    - name: redis
+      repository: https://groundhog2k.github.io/helm-charts
+      version: 2.2.1
+    description: A Helm chart for Kubernetes
+    digest: 460dc779b7216723e6fd49edc19d583201c74ac5c40dd45d165686a517cbc99e
+    name: oopsy
+    type: application
+    urls:
+    - https://github.com/klausmeyer/helm-charts/releases/download/oopsy-0.3.0/oopsy-0.3.0.tgz
+    version: 0.3.0
+  - apiVersion: v2
     created: "2024-11-03T19:53:40.816802481Z"
     dependencies:
     - name: rails-application
@@ -536,4 +552,4 @@ entries:
     urls:
     - https://github.com/klausmeyer/helm-charts/releases/download/whatchy-0.1.0/whatchy-0.1.0.tgz
     version: 0.1.0
-generated: "2025-12-11T17:48:13.725490343Z"
+generated: "2025-12-11T19:50:31.811317811Z"
