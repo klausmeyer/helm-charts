@@ -413,6 +413,19 @@ entries:
     version: 0.1.0-alpha1
   whatchy:
   - apiVersion: v2
+    created: "2025-12-11T17:48:13.725362455Z"
+    dependencies:
+    - name: rails-application
+      repository: https://klausmeyer.github.io/helm-charts
+      version: 0.2.1
+    description: A Helm chart for Kubernetes
+    digest: a34402dd30fcdeb89df86a800ee99ea5a2f5b8803bff9734e4c0fdaf2a1dabc7
+    name: whatchy
+    type: application
+    urls:
+    - https://github.com/klausmeyer/helm-charts/releases/download/whatchy-0.3.1/whatchy-0.3.1.tgz
+    version: 0.3.1
+  - apiVersion: v2
     created: "2025-12-11T17:20:36.486278716Z"
     dependencies:
     - name: rails-application
@@ -523,4 +536,4 @@ entries:
     urls:
     - https://github.com/klausmeyer/helm-charts/releases/download/whatchy-0.1.0/whatchy-0.1.0.tgz
     version: 0.1.0
-generated: "2025-12-11T17:46:19.8408023Z"
+generated: "2025-12-11T17:48:13.725490343Z"
