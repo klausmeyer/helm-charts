@@ -23,6 +23,7 @@ rails-application:
     web:
       enabled: true
     sidekiq:
+      args: ["./bin/sidekiq"]
       enabled: true
 
 redis:
