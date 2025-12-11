@@ -195,6 +195,15 @@ entries:
     version: 0.1.0
   rails-application:
   - apiVersion: v2
+    created: "2025-12-11T17:18:10.938403643Z"
+    description: Base chart for my rails applications
+    digest: d8ecb3097ceaf99f861bf92d56d8908923f6dde7c1aa93481362ac648af53b85
+    name: rails-application
+    type: application
+    urls:
+    - https://github.com/klausmeyer/helm-charts/releases/download/rails-application-0.2.0/rails-application-0.2.0.tgz
+    version: 0.2.0
+  - apiVersion: v2
     created: "2024-04-22T01:03:15.894156262Z"
     description: Base chart for my rails applications
     digest: c28402b839525111a3d08e2af12950cf5caaa89bb833fe016657f36ac533017a
@@ -492,4 +501,4 @@ entries:
     urls:
     - https://github.com/klausmeyer/helm-charts/releases/download/whatchy-0.1.0/whatchy-0.1.0.tgz
     version: 0.1.0
-generated: "2025-04-15T21:57:49.632317449Z"
+generated: "2025-12-11T17:18:11.112409506Z"
